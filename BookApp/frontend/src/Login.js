@@ -1,4 +1,3 @@
-// Import the required modules
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { emailORUsername, login, password } from "./actions";

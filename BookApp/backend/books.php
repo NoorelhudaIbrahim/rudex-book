@@ -1,18 +1,17 @@
-<?php require("./conn.php") ?>
-
 <?php
-error_reporting(E_ALL);
-ini_set('display_error',1);
+require "./conn.php";
+
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Headers:*');
 header('Access-Control-Allow-Methods:*');
+header('Access-Control-Allow-Origin:*');
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $user_id = $_POST["user_id"];
     $title = $_POST["title"];
-    $auther = $_POST["auther"];
-    $description = $_POST["description"]; 
+    $author = $_POST["author"];
+    $description = $_POST["description"];
+    $user_id = $_POST["user_id"];
     $file = $_FILES["file"];
 
     print_r($_POST);
@@ -24,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
     if (move_uploaded_file($file["tmp_name"], $targetPath)) {
       echo "File uploaded successfully";
-        $sql = "INSERT INTO books (title ,user_id, auther , description , image	)
-                VALUES ( ? , ? , ? , ? , ?)" ;
+        $sql = "INSERT INTO books (name , author , description , cover_image ,user_id)
+                VALUES (? , ? , ? , ? , ?)" ;
         $query = $conn->prepare($sql);
-        $query->execute([ $user_id , $auther , $title ,  $description ,$fileName]);
+        $query->execute([ $title, $author , $description ,$fileName , $user_id ]);
     } else {
       echo "Error uploading file";
     }
@@ -48,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $query = $conn->prepare($sql);
         $query->execute([$path[5]]);
     }
-  }
+    }
+  
 
   ?>

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import React from 'react'
 import './App.css'
-// import Footer from './components/Footer/Footer'
+import CreateBook from './pages/AddBook/AddBookForm';
 import Header from './components/Header/Header'
 import EditProfile from './pages/MyProfile/EditProfile'
 import Home from './pages/Home/Home'
@@ -25,7 +25,7 @@ function App() {
         <Route path="/profile" element={<MyProfile />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Signup />}/>
-        {/* <Route path="/user" element={<Users />}/> */}
+        <Route exact path="/AddBookForm" element={<CreateBook/>}/>
         <Route path="/home" element={<Home/>}></Route>
         <Route path='/profile/:id/edit' element={<EditProfile/>}/>
 

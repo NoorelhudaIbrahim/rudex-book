@@ -45,7 +45,7 @@ return( <div key={index}>
         {/* Profile picture help block*/}
         <div className="small font-italic text-muted mb-4">
        <h3>{data.name}</h3> 
-        <h3> {data.email} </h3> 
+        {/* <h3> {data.email} </h3>  */}
         
         </div>
         <button className="find-books-desktop-btn botn" type="submit"><Link to={`/profile/${data.id}/edit`}>edit</Link></button>

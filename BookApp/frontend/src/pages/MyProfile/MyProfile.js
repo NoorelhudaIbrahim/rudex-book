@@ -1,5 +1,5 @@
 
-// import ProfileDetails from '../../components/ProfileDetails/ProfileDetails'
+import ProfileDetails from '../../components/ProfileDetails/ProfileDetails'
 import ProfilePicture from '../../components/ProfilePicture/ProfilePicture'
 import './MyProfile.css'
 import React, { useEffect, useState } from 'react';
@@ -34,7 +34,7 @@ export default function MyProfile() {
 <div className="bookshelves-container">
    <ProfilePicture/>
   {/* <ProfilePicture/> */}
-  {/* <ProfileDetails/> */}
+  <ProfileDetails/>
 </div>
 
 

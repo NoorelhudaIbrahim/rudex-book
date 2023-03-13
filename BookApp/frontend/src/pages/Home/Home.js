@@ -23,7 +23,7 @@ export default function Home() {
   <div className="top-rated-books-container ">
     <div className="top-rated-books-header-container">
       <h1 className="top-rated-books-heading ">Top Rated Books</h1>
-      <a href="/shelf">
+      <a href="/AddBookForm">
         <button type="button" className="find-books-desktop-btn botn">
           Add Books
         </button>

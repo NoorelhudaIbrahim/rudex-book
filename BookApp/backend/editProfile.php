@@ -8,6 +8,43 @@ header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Headers:*');
 header('Access-Control-Allow-Methods:*');
 header('Access-Control-Allow-Origin:*');
+// if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+//     parse_str(file_get_contents("php://input"), $put_vars);
+// $id = $_POST['id'];
+// $name = $_POST['name'];
+// $email = $_POST['email'];
+// $password = $_POST['password'];
+// $new_image = $_FILES['profile_pic']['name'];
+// $image_size = $_FILES['profile_pic']['size'];
+// $image_tmp_name = $_FILES['profile_pic']['tmp_name'];
+// $image_folder =  'uploads/'.$new_image; 
+// $old_image = $_POST['old_image'];  
+
+// if($new_image != ""){
+//    $update_image = $new_image ;
+// }
+// else
+// {
+//     $update_image = $old_image ;
+// }
+
+
+// $sql = "UPDATE `users` SET name='$name' ,email='$email' , password='$password' , profile_pic='$update_image' WHERE id='$id'" ;
+// // $update_query_run = mysqli_query($con , $update_query);
+// $query = $conn->prepare($sql);
+// $query->execute();
+//  if ($query)
+//  {
+//     if($_FILES['image']['name'] != "")
+//    {
+//      move_uploaded_file($image_tmp_name , $image_folder);
+//      if(file_exists("../uploads/".$old_image))
+//      {
+//         unlink("../uploads/".$old_image);
+//      }
+//    }
+//  }
+// }
 
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -19,8 +56,8 @@ switch($method){
         $password = $_POST['password'];
         $email = $_POST['email'];
         $path = explode('/' , $_SERVER['REQUEST_URI']);
+        $user_id = $path[6];
         print_r($path);
-        $user_id = $path[4];
 
         if($_FILES["file"] == null){
         $file = "";
@@ -89,3 +126,5 @@ switch($method){
             break;
         }
 }
+
+?>

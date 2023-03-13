@@ -1,20 +1,4 @@
-// import './MyProfile.css'
 
-// export default function EditProfile() {
- 
-//   return (
-
-//     <>
-      
-// <div className="bookshelves-container">
-// <h1>nnn</h1>
-// </div>
-
-
-
-//     </>
-//   )
-// }
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -24,7 +8,7 @@ import {  Link  } from "react-router-dom";
 // import {  useParams } from 'react-router-dom';
 
 export default function EditProfile() {
-    // const current_ID = JSON.parse(sessionStorage.getItem('user_info'));
+    const current_ID = JSON.parse(sessionStorage.getItem('user_info'));
 
     const {id} = useParams();
     const navigate = useNavigate();

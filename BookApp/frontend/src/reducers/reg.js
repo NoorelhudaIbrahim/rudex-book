@@ -45,7 +45,7 @@ const registerReducer=(state={nameError:'',emailError:'',passError:'',confirmPas
             }
         case "SIGNUP":
             if(state.nameError == null && state.emailError == null && state.passError == null && state.confirmPassError == null) {
-                axios.post('http://localhost:80/Book/BookApp/backend/reg.php?name='+state.name+'&email='+state.email+'&password='+state.password)
+                axios.post('http://localhost/Book/BookApp/backend/reg.php?name='+state.name+'&email='+state.email+'&password='+state.password)
                 window.location.href = "/Login";
              console.log('here');
             }else{

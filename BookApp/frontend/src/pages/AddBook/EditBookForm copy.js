@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../AddBook/AddBookForm.css'
 
-export default function CreateBook() {
+export default function EditBook() {
 
         // const current_ID = JSON.parse(sessionStorage.getItem('user_info.id'));
         const user_info = sessionStorage.getItem('user_info');
@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
 
     <br/>
 
-    <button className="BtnAdd"> Create Book </button>
+    <button className="BtnAdd"> Edit Book </button>
    </form>
  </section>
 </div>

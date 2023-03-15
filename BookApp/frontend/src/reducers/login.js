@@ -18,7 +18,7 @@ const loginReducer=(state={error:''},action)=>{
         case "LOGIN":
           console.log("login")
                 const loadInfo = async () => {
-                    const res = await axios.get(`http://localhost:80/Book/BookApp/backend/login.php?email=${state.emailORUsername}&password=${state.password}`);
+                    const res = await axios.get(`http://localhost/Book/BookApp/backend/login.php?email=${state.emailORUsername}&password=${state.password}`);
                     // sessionStorage.clear()
                 sessionStorage.setItem("user_info",JSON.stringify( res.data ));
                 console.log(res.data,"data");

@@ -33,7 +33,6 @@ export default function MyProfile() {
       
 <div className="bookshelves-container">
    <ProfilePicture/>
-  {/* <ProfilePicture/> */}
   <ProfileDetails/>
 </div>
 

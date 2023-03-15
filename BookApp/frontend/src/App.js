@@ -5,6 +5,8 @@ import store from './store';
 import React from 'react'
 import './App.css'
 import CreateBook from './pages/AddBook/AddBookForm';
+import EditBook from './pages/AddBook/EditBookForm copy';
+
 import Header from './components/Header/Header'
 import EditProfile from './pages/MyProfile/EditProfile'
 import Home from './pages/Home/Home'
@@ -26,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Signup />}/>
         <Route exact path="/AddBookForm" element={<CreateBook/>}/>
+        <Route exact path="/EditBookForm" element={<EditBook/>}/>
         <Route path="/home" element={<Home/>}></Route>
         <Route path='/profile/:id/edit' element={<EditProfile/>}/>
 

@@ -28,7 +28,7 @@ const handleSubmit = async (e) => {
 
     try {
       const response = await axios.post(
-        "http://localhost/Book/BookApp/backend/books.php",
+        "http://localhost/rudex-book/BookApp/backend/books.php",
         formData
       );
       console.log(response.data);
